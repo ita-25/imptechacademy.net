@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | Impact Tech Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+             <a href="index.html"><img src="logo.png" alt="Impact Tech Academy Logo"></a>
+        </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="program.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+        <h1>Impact Tech Volunteer Application</h1>
+        <p>Join us in building innovation and community through accessible technology.</p>
+        </div>
+    </header>
+
+    <section class="slideshow-container container">
+        <div class="slide fade">
+            <img src="Web development.jpg" alt="Tech Workshop" class="slide-image">
+        </div>
+        <div class="slide fade">
+            <img src="Impact Tech Community.jpg" alt="Community Event" class="slide-image">
+        </div>
+        <div class="slide fade">
+            <img src="Technology.jpg" alt="Innovation Lab" class="slide-image">
+        </div>
+    </section>
+
+    <div class="dot-container container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">1. Who can apply to be an Impact Tech Academy volunteer?</button>
+                <div class="faq-answer">
+                    <p>We welcome individuals who are:</p>
+                    <ul>
+                        <li>Between the ages of <strong>18 and 35</strong></li>
+                        <li>Passionate about <strong>technology, innovation, and community development</strong></li>
+                        <li>Able to commit at least <strong>5 hours per week</strong></li>
+                        <li>Located in <strong>Nigeria</strong> or able to work remotely if applicable</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">2. What roles are available for volunteers?</button>
+                <div class="faq-answer">
+                    <ul>
+                        <li><strong>Event Organization</strong> (workshops, bootcamps, training sessions)</li>
+                        <li><strong>Community Management</strong> (supporting new members, answering questions)</li>
+                        <li><strong>Tech Education</strong> (assisting with tutorials, webinars, or mentorship)</li>
+                        <li><strong>Content Creation</strong> (articles, social media, graphics, videos)</li>
+                        <li><strong>Logistics and Admin Support</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">3. Do I need to be a tech expert to volunteer?</button>
+                <div class="faq-answer">
+                    <p>Not at all! While technical knowledge is an advantage, we also need volunteers in areas like communication, design, planning, and community engagement. We need diverse talents to maximize our impact!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">4. Is this a fully paid opportunity?</button>
+                <div class="faq-answer">
+                    <p>No. This is a <strong>volunteer role</strong>. Volunteers will not receive financial compensation. However, volunteers will gain:</p>
+                    <ul>
+                        <li>Hands-on experience in real-world projects</li>
+                        <li>Networking opportunities with professionals in tech</li>
+                        <li>Mentorship and training opportunities</li>
+                        <li>A <strong>certificate of recognition</strong> for outstanding contributions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">5. What is the time commitment required?</button>
+                <div class="faq-answer">
+                    <p>We expect volunteers to commit at least <strong>5 hours per week</strong> for a minimum of <strong>6 months</strong>. This helps us maintain consistency and long-term impact.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">6. How do I apply?</button>
+                <div class="faq-answer">
+                    <p>If you meet the requirements, simply click the button below to complete the application form.</p>
+                    <a href="#application-form-section" class="cta-button">Go to Application Form</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section" id="application-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Volunteer Application Form</h2>
+                <p>Please fill out this form carefully. Fields marked with * are required.</p>
+                <form action="https://formspree.io/f/mgvnvagl" method="POST" id="volunteer-form">
+                    
+                    <input type="hidden" name="Form_Source" value="Volunteer_Page_Submission">
+
+                    <label for="name">Your Full Name *</label>
+                    <input type="text" id="name" name="Full_Name" required>
+
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="Email" required>
+
+                    <label for="phone">Your Phone Number</label>
+                    <input type="tel" id="phone" name="Phone">
+
+                    <label for="skills">Key Skills (e.g., HTML, Tutoring, Event Planning) *</label>
+                    <input type="text" id="skills" name="Key_Skills" required>
+
+                    <label for="message">Why do you want to volunteer with Impact Tech Academy? *</label>
+                    <textarea id="message" name="Message" rows="5" required></textarea>
+
+                    <button type="submit" class="submit-button">Submit Volunteer Application</button>
+                </form>
+            </div>
+            
+            <a href="javascript:history.back()" class="go-back-button">← Go Back</a>
+        </div>
+    </section>
+    
+    <div id="confirmation-popup" class="popup">
+        <div class="popup-content">
+            <h2>Application Received!</h2>
+            <p>Thank you for your interest in volunteering! We've received your details and will be in touch soon.</p>
+            <p>You can also chat with us directly on WhatsApp for any immediate questions.</p>
+            <a href="https://wa.me/2349071849794?text=Hello%20Impact%20Tech%20Academy%2C%20I%20have%20a%20question%20about%20my%20volunteer%20application." class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
+            <button onclick="document.getElementById('confirmation-popup').style.display='none'; document.body.style.overflow='auto';" class="go-back-button">Close</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo.png" alt="Impact Tech Academy Logo" class="footer-logo">
+                    <p>Empowering the next generation of tech innovators.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="program.html">Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto: impacttechacademy@gmail.com">impacttechacademy@gmail.com</a></p>
+                    <div class="social-links">
+                       <a href="https://www.facebook.com/share/1BvfP1JTjo/"><img src="facebook icon.jpeg" alt="Facebook"></a>
+                        <a href="https://x.com/@Imptechacademy"><img src="twitter icon.jpg" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/impacttech_academy?igsh=YzljYTk1ODg3Zg=="><img src="instagram icon.jpeg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Impact Tech Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Formspree Submission Handling (Reused from contact page)
+        var form = document.getElementById("volunteer-form");
+        var popup = document.getElementById("confirmation-popup");
+        var body = document.body;
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    popup.style.display = 'flex';
+                    body.style.overflow = 'hidden';
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert("Oops! There was a problem submitting your form");
+                        }
+                    });
+                }
+            }).catch(error => {
+                alert("Oops! There was a problem submitting your form");
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+        
+        // FAQ toggle Script
+        const questions = document.querySelectorAll(".faq-question");
+        questions.forEach((q) => {
+            q.addEventListener("click", () => {
+                const answer = q.nextElementSibling;
+                // Toggle display style
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+                q.classList.toggle("active-faq");
+            });
+        });
+
+        // Slideshow Script
+        let slideIndex = 1;
+        
+        // Next/previous controls (Optional: for manual slide change)
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        // Automatic Slideshow
+        function autoShowSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active-dot";
+            setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
+        }
+
+        // Start the slideshow when the page loads
+        autoShowSlides();
+
+    </script>
+</body>
+</html>

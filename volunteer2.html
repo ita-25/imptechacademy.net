@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | Impact Tech Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Impact Tech Academy Logo">
+        </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <h1>Volunteer With Us</h1>
+        <p>Lend your skills to empower the next generation of tech innovators.</p>
+    </header>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Join Our Team</h2>
+                <form action="https://formspree.io/f/mgvnvagl" method="POST" id="volunteer-form">
+                    
+                    <input type="hidden" name="Form_Source" value="Volunteer_Page_Submission">
+
+                    <label for="name">Your Full Name</label>
+                    <input type="text" id="name" name="Full_Name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="Email" required>
+
+                    <label for="phone">Your Phone Number</label>
+                    <input type="tel" id="phone" name="Phone">
+
+                    <label for="skills">Key Skills (e.g., HTML, Tutoring, Event Planning)</label>
+                    <input type="text" id="skills" name="Key_Skills" required>
+
+                    <label for="message">Why do you want to volunteer with Impact Tech Academy?</label>
+                    <textarea id="message" name="Message" rows="5" required></textarea>
+
+                    <button type="submit" class="submit-button">Submit Volunteer Application</button>
+                </form>
+            </div>
+
+            <div class="contact-message">
+                <p>Have questions about volunteering? Feel free to contact us directly.</p>
+                <a href="https://wa.me/2349071849794?text=Hello%20Impact%20Tech%20Academy%2C%20I%20have%20a%20question%20about%20volunteering." class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
+            </div>
+            
+            <a href="javascript:history.back()" class="go-back-button">← Go Back</a>
+        </div>
+    </section>
+    
+    <div id="confirmation-popup" class="popup">
+        <div class="popup-content">
+            <h2>Application Received!</h2>
+            <p>Thank you for your interest in volunteering! We've received your details and will be in touch soon.</p>
+            <p>You can also chat with us directly on WhatsApp for any immediate questions.</p>
+            <a href="https://wa.me/2349071849794" class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
+            <button onclick="document.getElementById('confirmation-popup').style.display='none'; document.body.style.overflow='auto';" class="go-back-button">Close</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo.png" alt="Impact Tech Academy Logo" class="footer-logo">
+                    <p>Empowering the next generation of tech innovators.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto: impacttechacademy@gmail.com">impacttechacademy@gmail.com</a></p>
+                    <div class="social-links">
+                        <a href="#"><img src="facebook icon.jpeg" alt="Facebook"></a>
+                        <a href="#"><img src="twitter icon.jpg" alt="Twitter"></a>
+                        <a href="#"><img src="instagram icon.jpeg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Impact Tech Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reusing the same Formspree script from the contact page
+        var form = document.getElementById("volunteer-form");
+        var popup = document.getElementById("confirmation-popup");
+        var body = document.body;
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    popup.style.display = 'flex';
+                    body.style.overflow = 'hidden';
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert("Oops! There was a problem submitting your form");
+                        }
+                    });
+                }
+            }).catch(error => {
+                alert("Oops! There was a problem submitting your form");
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

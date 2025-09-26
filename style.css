@@ -1,0 +1,1568 @@
+/* Color Palette & Variables based on the flyer */
+:root {
+    --primary-color: #011C40; /* Dark, rich blue from flyer background */
+    --accent-color: #26A5FF; /* Vibrant, electric blue */
+    --light-accent-color: #4FB0FF; /* Lighter shade of accent for hover effects */
+    --white-color: #FFFFFF;
+    --text-color: #E6F2FF; /* Light blue for secondary text on dark background */
+}
+
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--white-color);
+    line-height: 1.6;
+    background-color: var(--primary-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: var(--white-color);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Call-to-Action Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--light-accent-color);
+}
+
+/* Call-to-Action Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px; /* This creates the curve */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--light-accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    background: url('a lady setting and using her phone3.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Remove the mobile-specific stacking rule */
+@media (max-width: 500px) {
+    .hero-buttons {
+        gap: 15px;
+    }
+}
+
+
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--primary-color);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.services-section h2 {
+    color: var(--white-color);
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.service-card {
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.service-card img {
+    height: 80px;
+    margin-bottom: 20px;
+    filter: invert(1);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.about-section h2 {
+    color: var(--primary-color);
+}
+
+.about-section p {
+    color: var(--primary-color);
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h2 {
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.testimonials-section h2 {
+    color: var(--white-color);
+}
+
+.testimonial-card {
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.testimonial-card span {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.contact-section h2 {
+    color: var(--primary-color);
+}
+
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.contact-section .cta-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.contact-section .cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--accent-color);
+}
+
+.footer-logo {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+/* About page specific styles */
+.page-hero {
+    padding: 150px 0 80px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.page-content {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.page-content h2, .page-content p {
+    color: var(--primary-color);
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text-content h2 {
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-statement {
+    background: linear-gradient(rgba(1, 28, 64, 0.9), rgba(1, 28, 64, 0.9)), url('mission-bg.jpg') no-repeat center center/cover;
+    color: var(--white-color);
+}
+
+.values-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.value-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 280px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.value-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white-color);
+    margin: 5px 0;
+    transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 25px;
+    }
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background-color: var(--primary-color);
+        width: 70%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+    }
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    .nav-links li {
+        margin: 20px 0;
+    }
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .services-grid, .about-content, .footer-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about-text, .about-image {
+        text-align: center;
+    }
+    .about-section {
+        padding: 60px 0;
+    }
+    .services-section {
+        padding: 60px 0;
+    }
+    /* New fix for the footer grid */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+/* Page-specific Hero Section */
+.page-hero {
+    padding: 150px 0 80px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Page Content Section */
+.page-content {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.page-content h2, .page-content p {
+    color: var(--primary-color);
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text-content h2 {
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Statement Section */
+.mission-statement {
+    background: linear-gradient(rgba(1, 28, 64, 0.9), rgba(1, 28, 64, 0.9)), url('mission-bg.jpg') no-repeat center center/cover;
+    color: var(--white-color);
+}
+
+.values-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.value-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 280px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.value-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive adjustments for about page */
+@media (max-width: 768px) {
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text-content h2 {
+        text-align: center;
+    }
+}
+
+/* Mission Section Styles */
+.mission-section {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.mission-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.mission-text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.mission-text-content h2 {
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.mission-text-content h3 {
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.mission-text-content p {
+    color: var(--primary-color);
+}
+
+.mission-image {
+    flex: 1;
+    text-align: center;
+}
+
+.mission-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Call to Action Section Styles */
+.cta-section-about {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+.cta-section-about h2 {
+    color: var(--white-color);
+}
+
+.cta-section-about p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.cta-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.cta-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex-basis: 30%;
+    min-width: 280px;
+}
+
+.cta-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.cta-card p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-top: 50px;
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+}
+
+
+/* Responsive adjustments for about page */
+@media (max-width: 768px) {
+    .mission-flex, .cta-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-image {
+        margin-top: 20px;
+    }
+
+    .cta-card {
+        min-width: 100%;
+    }
+
+    .contact-link {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+/* Vision Section on About Page */
+.vision-section {
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.vision-section h2 {
+    color: var(--white-color);
+}
+
+.vision-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Programs Page Styles */
+.program-highlights-section {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.program-highlights-section h2 {
+    color: var(--primary-color);
+}
+
+.program-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.program-video {
+    flex: 2;
+    text-align: center;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+.program-details {
+    text-align: left;
+    margin-top: 40px;
+    background-color: var(--light-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.program-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.program-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.program-details ul li p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.program-details ul li p strong {
+    color: var(--accent-color);
+}
+
+.program-card {
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex-basis: 30%;
+    max-width: 350px;
+    min-width: 250px;
+}
+
+.program-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.program-card h3 {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.program-card p {
+    color: var(--text-color);
+}
+
+/* Programs Page Styles */
+.program-highlights-section {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    text-align: center;
+     display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.program-highlights-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.program-highlights-section > p {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--primary-color); /* This will change the text to a darker color */
+}
+
+
+
+/* Responsive adjustments for Programs page */
+@media (max-width: 768px) {
+    .program-content {
+        flex-direction: column;
+    }
+
+    .program-video, .program-details {
+        text-align: center;
+    }
+}
+
+/* Trainers Page Styles */
+.trainers-content {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    background-color: var(--light-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex-basis: 45%;
+    max-width: 500px;
+}
+
+.trainer-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent-color);
+}
+
+.trainer-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.trainer-card p {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.trainer-bio {
+    text-align: left;
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .trainers-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: var(--white-color);
+    padding: 100px 0;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-form-section label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.submit-button {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--light-accent-color);
+}
+
+.contact-message {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact-message h2 {
+    color: var(--primary-color);
+}
+
+.contact-message p {
+    color: var(--primary-color);
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366; /* WhatsApp brand color */
+    color: var(--white-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Darker green */
+}
+
+.go-back-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+    background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+}
+
+/* Pop-up Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* On top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup-content {
+    background-color: var(--white-color);
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    color: var(--primary-color);
+    position: relative;
+    transform: scale(0.9);
+    animation: popUp 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.popup-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Flyer Section */
+.flyer-section {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.flyer-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.flyer-section p {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.flyer-image-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flyer-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill Showcase Section */
+.skill-showcase {
+    background-color: var(--light-bg-color);
+    text-align: center;
+}
+
+.skill-showcase h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.skill-showcase > p {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.skill-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.skill-card {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex-basis: 30%;
+    max-width: 350px;
+    min-width: 250px;
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--secondary-color);
+}
+
+.large-cta {
+    font-size: 1.2rem;
+    padding: 18px 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-card {
+        min-width: 100%;
+    }
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 50px auto 0;
+}
+
+.slide {
+    display: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Dots (Indicators) */
+.dot-container {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active-dot, .dot:hover {
+    background-color: var(--accent-color);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--white-color);
+    padding: 50px 0;
+    color: var(--primary-color);
+}
+
+.faq-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--light-bg-color);
+    border-radius: 5px;
+}
+
+.faq-question {
+    background-color: var(--light-bg-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.4s;
+}
+
+.faq-question:hover, .faq-question.active-faq {
+    background-color: #e0e0e0;
+}
+
+.faq-answer {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0; /* Hidden by default for accordion effect */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    padding: 15px 0 5px;
+    color: var(--secondary-color);
+}
+
+.faq-answer ul {
+    list-style: disc;
+    margin: 10px 0 15px 40px;
+    color: var(--secondary-color);
+}
+
+.faq-answer ul li {
+    margin-bottom: 5px;
+}
+
+.apply-btn {
+    /* Reusing cta-button styling but with a unique class for specific placement */
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slideshow-container {
+        margin: 20px auto 0;
+    }
+}
+
+/* Sponsorship Tiers Section */
+.sponsorship-tiers {
+    background-color: var(--light-bg-color);
+    text-align: center;
+}
+
+.sponsorship-tiers h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.sponsorship-tiers > p {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.tiers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tier-card {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+    max-width: 350px;
+    min-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--accent-color);
+    text-align: left;
+}
+
+.tier-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tier-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.tier-card .amount {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.tier-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.tier-card ul li p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.primary-tier {
+    border-top: 5px solid var(--primary-color);
+    background-color: #f2f7ff; /* Slightly different background for the main tier */
+    transform: scale(1.05); /* Highlight the main tier */
+}
+
+.primary-tier:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.small-cta {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .tiers-grid {
+        gap: 20px;
+    }
+    .tier-card {
+        min-width: 45%;
+    }
+    .primary-tier {
+        transform: scale(1.0);
+    }
+    .primary-tier:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .tiers-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tier-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Ensure text inside sponsorship list items is dark and readable */
+.tier-card ul li p {
+    color: var(--primary-color) !important; 
+}
+
+/* Fix visibility for the description paragraph above the Volunteer form */
+#application-form-section .form-container p {
+    color: var(--primary-color);
+    margin-bottom: 20px; /* Adds a bit of space below the text */
+}
+
+/* Video Section (Original, if not already there) */
+.video-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--light-bg-color);
+}
+
+.video-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* New CSS for Android Phone Frame */
+.phone-frame-wrapper {
+    /* Responsive wrapper for the entire phone frame */
+    max-width: 400px; /* Max width of the phone frame */
+    margin: 0 auto;
+    padding: 20px; /* Padding for responsive scaling */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 177.77%; /* Aspect ratio for a typical phone screen (9:16) */
+    background-color: #333; /* Dark color for the phone body */
+    border-radius: 40px; /* Rounded corners for the phone */
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1), /* Inner shadow */
+                0 0 0 12px rgba(255, 255, 255, 0.1), /* Highlight */
+                0 20px 60px rgba(0, 0, 0, 0.4); /* Outer shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures video stays within rounded corners */
+}
+
+.screen-area {
+    position: absolute;
+    top: 5%; /* Adjust to control top bezel size */
+    left: 5%; /* Adjust to control side bezel size */
+    right: 5%; /* Adjust to control side bezel size */
+    bottom: 5%; /* Adjust to control bottom bezel size */
+    border-radius: 30px; /* Inner rounded screen */
+    background-color: black; /* Screen background when video isn't playing */
+    display: flex; /* For centering the video */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.screen-area video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills screen without distortion */
+    border-radius: 20px; /* Match inner screen rounding */
+    display: block;
+}
+
+/* Optional: Add a notch/speaker and buttons for more realism */
+.phone-frame::before { /* Notch/Speaker */
+    content: '';
+    position: absolute;
+    top: 2%; /* Adjust vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 1.5%;
+    background-color: #222;
+    border-radius: 10px;
+    z-index: 1; /* Ensures it's above the screen */
+}
+
+.phone-frame::after { /* Side Button (Power/Volume) */
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 3%;
+    height: 10%;
+    background-color: #555;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 1;
+}
+
+/* Responsive adjustments for phone frame */
+@media (max-width: 600px) {
+    .phone-frame {
+        border-radius: 30px;
+    }
+    .screen-area {
+        border-radius: 25px;
+        top: 4%;
+        left: 4%;
+        right: 4%;
+        bottom: 4%;
+    }
+    .phone-frame::before {
+        top: 1.5%;
+        height: 1%;
+    }
+}
+
+@media (max-width: 400px) {
+    .phone-frame-wrapper {
+        padding: 10px;
+    }
+    .phone-frame {
+        border-radius: 25px;
+    }
+    .screen-area {
+        border-radius: 20px;
+        top: 3%;
+        left: 3%;
+        right: 3%;
+        bottom: 3%;
+    }
+}
+
+/* New CSS for the separate poster image */
+.video-poster-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* This displays the full image, scaled down if necessary */
+    background-color: black; /* Fill empty space with black if image has different aspect ratio */
+    z-index: 2; /* Ensures it's above the video */
+    pointer-events: none; /* Allows clicks to pass through to the video controls */
+    transition: opacity 0.3s ease-out; /* Smooth fade out */
+}
+
+/* Ensure the video itself fills the screen-area when playing */
+.screen-area video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Video will fully fill the screen-area */
+    border-radius: 20px; /* Match inner screen rounding */
+    display: block;
+    position: relative; /* Ensure it stays below the poster initially */
+    z-index: 1;
+}
