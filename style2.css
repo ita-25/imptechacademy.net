@@ -1428,3 +1428,53 @@ p {
     color: var(--primary-color);
     margin-bottom: 20px; /* Adds a bit of space below the text */
 }
+
+/* Accessibility Improvement: Prevents body scroll when menu is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------- */
+/* Hamburger to Close Icon Transformation */
+/* ---------------------------------------------------- */
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Hides the middle bar */
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Rotates top bar to form top half of 'X' */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Rotates bottom bar to form bottom half of 'X' */
+}
+
+/* Add this media query block to the bottom of your style.css */
+@media (min-width: 992px) { /* Applies to large screens (desktop/PC) */
+    .hero-section {
+        /* Pushes the focus area of the background image down */
+        background-position: center 35% !important; 
+    }
+}
+
+/* Styling for the Active Navigation Link */
+.nav-links a.active-nav {
+    color: var(--accent-color); /* Change text color to the accent color */
+    border-bottom: 3px solid var(--accent-color); /* Add a highlight line */
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Ensure the hover effect doesn't remove the active state */
+.nav-links li:hover a {
+    color: inherit; /* Don't force hover to override active state */
+}
+
+/* --- Form Focus Highlighting --- */
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: var(--accent-color); /* Changes border color to your brand accent */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25); /* Adds a soft glow effect */
+    outline: none; /* Removes default browser focus outline */
+}
