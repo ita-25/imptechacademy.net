@@ -1566,3 +1566,32 @@ p {
     position: relative; /* Ensure it stays below the poster initially */
     z-index: 1;
 }
+
+/* Accessibility Improvement: Prevents body scroll when menu is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------- */
+/* Hamburger to Close Icon Transformation */
+/* ---------------------------------------------------- */
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Hides the middle bar */
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Rotates top bar to form top half of 'X' */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Rotates bottom bar to form bottom half of 'X' */
+}
+
+/* Add this media query block to the bottom of your style.css */
+@media (min-width: 992px) { /* Applies to large screens (desktop/PC) */
+    .hero-section {
+        /* Pushes the focus area of the background image down */
+        background-position: center 35% !important; 
+    }
+}
