@@ -1784,3 +1784,12 @@ body.no-scroll {
 .cta-button.video-cta:hover {
     background-color: #CC0000; /* Darker red on hover */
 }
+
+/* --- Fix: Remove Blue Line on Nav Link Hover --- */
+
+/* Targets links within the main navigation */
+.nav-links li a:hover, 
+.nav-links li a:focus {
+    /* Ensures the underline is completely removed */
+    text-decoration: none !important; 
+}
