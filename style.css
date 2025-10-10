@@ -1722,3 +1722,34 @@ body.no-scroll {
     box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25); /* Adds a soft glow effect */
     outline: none; /* Removes default browser focus outline */
 }
+
+/* --- General Hero Section Styling (Ensures base behavior) --- */
+.hero-section {
+    /* Assuming your current background image setup: */
+    background: url('a lady setting and using her phone3.jpg') no-repeat center center/cover; 
+    background-repeat: no-repeat;
+    background-size: cover; /* Keeps the image covering the area */
+    background-color: var(--primary-color); 
+    
+    /* Ensure the content is centered */
+    background-position: center center; 
+
+    padding: 100px 20px;
+    min-height: 400px; /* Minimum height for visual impact on smaller screens */
+    /* ... other styling ... */
+}
+
+
+/* --- Responsive Fix for Large PC Screens (1200px and up) --- */
+@media (min-width: 1200px) {
+    .hero-section {
+        /* 1. Limit the height on very wide screens for a professional banner look */
+        height: 50vh; /* Sets height to 50% of the viewport height (approx 450-550px) */
+        max-height: 600px; /* Absolute maximum height limit */
+        
+        /* 2. Re-anchor the image focus point (Crucial for showing the subject) 
+           Moves the image focus up, away from the aggressive crop in the middle. 
+           Adjust the percentage (e.g., 20% or 30%) based on where the subject's face is. */
+        background-position: center 30%; 
+    }
+}
