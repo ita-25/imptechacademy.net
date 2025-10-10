@@ -1753,3 +1753,34 @@ body.no-scroll {
         background-position: center 30%; 
     }
 }
+
+
+/* Styling for the new YouTube CTA button */
+.video-cta-container {
+    text-align: center;
+    margin: 40px auto 0; /* Add space below the main video */
+    max-width: 800px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Subtle separator line */
+}
+
+.video-cta-container p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.cta-button.video-cta {
+    /* Style the button specifically for the YouTube link */
+    background-color: #FF0000; /* Standard YouTube Red */
+    color: var(--white-color);
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: inline-flex; /* Allows icon and text to align */
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.cta-button.video-cta:hover {
+    background-color: #CC0000; /* Darker red on hover */
+}
