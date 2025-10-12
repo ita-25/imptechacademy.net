@@ -1877,3 +1877,21 @@ body.no-scroll {
 .code-starter-cta:hover {
     background-color: #ffc107; /* Example hover color */
 }
+
+
+/* --- Correction for Code Starter Kit Text Visibility --- */
+
+/* 1. Ensure the section heading (h2) is clearly visible */
+.code-starter-section h2 {
+    color: var(--primary-color); 
+    text-align: center; 
+    margin-bottom: 15px;
+}
+
+/* 2. Ensure the introductory paragraph text is clearly visible */
+.code-starter-section .intro-text {
+    color: var(--primary-color); 
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
