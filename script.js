@@ -57,3 +57,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // --- End Active Navigation ---
+
+// --- Code Starter Kit Script (Program Page Only) ---
+
+// 1. Load CodeMirror Libraries (Add these to the head section as instructed)
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const htmlEditorElement = document.getElementById('html-editor');
+    const previewIframe = document.getElementById('preview-iframe');
+
+    if (htmlEditorElement) {
+        // Initialize CodeMirror editor for HTML
+        const editor = CodeMirror.fromTextArea(htmlEditorElement, {
+            mode: 'xml',
+            theme: 'darcula', // Matches the CSS theme link
+            lineNumbers: true
+        });
+
+        // Function to update the iframe preview
+        function updatePreview() {
+            const htmlCode = editor.getValue();
+            
+            // Write the code directly into the iframe's document
+            previewIframe.contentDocument.open();
+            previewIframe.contentDocument.write(htmlCode);
+            previewIframe.contentDocument.close();
+        }
+
+        // 2. Initial load of the preview
+        updatePreview();
+
+        // 3. Update the preview whenever the code changes
+        editor.on('change', updatePreview);
+    }
+});
+// --- End Code Starter Kit Script ---
+
