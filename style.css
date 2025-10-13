@@ -1895,3 +1895,34 @@ body.no-scroll {
     margin-bottom: 30px;
     text-align: center;
 }
+
+/* --- Live Color Changer Controls Styling --- */
+.color-controls {
+    padding: 15px;
+    background-color: #ffffff; 
+    border: 1px solid #ddd;
+    border-radius: 8px 8px 0 0; 
+    margin-bottom: -1px; /* Overlaps border with editor for cleaner look */
+}
+
+.color-controls h4 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.color-controls label {
+    font-size: 0.9rem;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.color-controls input[type="color"] {
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    margin-right: 15px;
+    cursor: pointer;
+    vertical-align: middle;
+}
