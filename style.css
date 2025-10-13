@@ -1999,3 +1999,83 @@ body.no-scroll {
 .CodeMirror, #preview-iframe {
     height: 400px; 
 }
+
+
+/* --- Program Depth Section Styling --- */
+.program-depth-section {
+    padding: 60px 0;
+    background-color: var(--white-color); /* Use white for clean contrast */
+    text-align: center;
+}
+
+.program-depth-section .section-title {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.program-depth-section .section-intro {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Mastery Grid Layout */
+.mastery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.mastery-item {
+    background-color: #f4f9f4; /* Subtle background for each item */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--accent-color); /* Accent color border for emphasis */
+}
+
+.mastery-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.mastery-item h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.mastery-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Final CTA Button Styling */
+.final-cta {
+    margin-top: 30px;
+}
+
+.final-register-cta {
+    /* Ensure this stands out as the main action button */
+    background-color: var(--accent-color); 
+    color: var(--primary-color);
+    font-weight: 800;
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.final-register-cta:hover {
+    background-color: #ffc107; /* Darker/vibrant hover color */
+}
