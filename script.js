@@ -58,40 +58,72 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // --- End Active Navigation ---
 
-// --- Code Starter Kit Script (Program Page Only) ---
 
-// 1. Load CodeMirror Libraries (Add these to the head section as instructed)
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+
+// --- Updated Code Starter Kit Script (Program Page Only) ---
 
 document.addEventListener('DOMContentLoaded', function() {
     const htmlEditorElement = document.getElementById('html-editor');
     const previewIframe = document.getElementById('preview-iframe');
+    const colorInputs = document.querySelectorAll('.color-controls input[type="color"]');
 
     if (htmlEditorElement) {
-        // Initialize CodeMirror editor for HTML
+        // Initialize CodeMirror editor
         const editor = CodeMirror.fromTextArea(htmlEditorElement, {
             mode: 'xml',
-            theme: 'darcula', // Matches the CSS theme link
+            theme: 'darcula',
             lineNumbers: true
         });
 
-        // Function to update the iframe preview
+        // Function to update the CodeMirror content and preview
         function updatePreview() {
             const htmlCode = editor.getValue();
             
-            // Write the code directly into the iframe's document
+            // Write the current code into the iframe's document
             previewIframe.contentDocument.open();
             previewIframe.contentDocument.write(htmlCode);
             previewIframe.contentDocument.close();
         }
 
-        // 2. Initial load of the preview
-        updatePreview();
+        // Function to handle color changes
+        function handleColorChange() {
+            const headingColor = document.getElementById('primaryColor').value;
+            const boxColor = document.getElementById('bgColor').value;
+            const pageColor = document.getElementById('pageColor').value;
 
-        // 3. Update the preview whenever the code changes
+            // 1. Get the current HTML content from the editor
+            let htmlCode = editor.getValue();
+            
+            // 2. REGEX: Find and replace the CSS color values within the <style> block of the code
+            
+            // a. Replace Heading Color (#28a745)
+            htmlCode = htmlCode.replace(/(h1 \{ color: )#[a-fA-F0-9]{6}(; \/\* Impact Tech's primary green \*\/\})/, `$1${headingColor}$2`);
+            
+            // b. Replace Box Background (#ffffff)
+            htmlCode = htmlCode.replace(/(.ita-box \{.*?background-color: )#[a-fA-F0-9]{6}(;.*?)/s, `$1${boxColor};`);
+
+            // c. Replace Page Background (#f4f4f9)
+            htmlCode = htmlCode.replace(/(body \{.*?background-color: )#[a-fA-F0-9]{6}(;.*?)/s, `$1${pageColor};`);
+
+
+            // 3. Update the CodeMirror editor with the new colored code
+            // (This visually updates the code the user sees)
+            editor.setValue(htmlCode); 
+        }
+
+
+        // --- Event Listeners ---
+        
+        // Listen for changes in the color pickers
+        colorInputs.forEach(input => {
+            input.addEventListener('input', handleColorChange);
+        });
+
+        // Listen for changes directly in the code editor (user typing)
         editor.on('change', updatePreview);
+        
+        // Initial load of the preview (after colors are set)
+        updatePreview();
     }
 });
-// --- End Code Starter Kit Script ---
-
+// --- End Updated Code Starter Kit Script ---
