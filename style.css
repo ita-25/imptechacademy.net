@@ -2080,3 +2080,10 @@ body.no-scroll {
 .final-register-cta:hover {
     background-color: #ffc107; /* Darker/vibrant hover color */
 }
+
+
+/* Fix spacing issue in the Code Explanations panel */
+.code-explanations h4 {
+    /* Existing styles remain */
+    margin-bottom: 25px; /* Increase this value slightly */
+}
