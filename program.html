@@ -144,14 +144,48 @@
             Experience the fundamentals! We believe the best way to learn is by doing. Below is a simple HTML, CSS, and JS structure—the building blocks of every website you see. 
         </p>
         
-        <div class="code-demo-container">
-            <div class="code-editors">
-<div class="color-controls">
-    <h4>Try Changing the Colors!</h4>
-    <label for="primaryColor">Heading Color:</label>
-    <input type="color" id="primaryColor" value="#28a745"> <label for="bgColor">Box Background:</label>
-    <input type="color" id="bgColor" value="#ffffff"> <label for="pageColor">Page Background:</label>
-    <input type="color" id="pageColor" value="#f4f4f9"> </div>
+       <div class="code-demo-container">
+    
+    <div class="code-editor-column">
+        
+        <div class="color-controls">
+            </div>
+
+        <div class="code-editors">
+            <div class="editor-panel">
+                <h3>HTML <small>Structure</small></h3>
+                <textarea id="html-editor">
+</textarea>
+            </div>
+        </div>
+    </div>
+    
+    <div class="code-explanations">
+        <h4>How the Code Works:</h4>
+        <div class="explanation-item">
+            <h5>1. HTML: The Skeleton</h5>
+            <p>HTML (HyperText Markup Language) provides the **structure** and content. The `<h1>` tag holds the main title, and the `<p>` tag holds regular text.</p>
+        </div>
+        <div class="explanation-item">
+            <h5>2. CSS: The Style</h5>
+            <p>CSS (Cascading Style Sheets) dictates the **design**. It tells the browser what colors, fonts, and layouts to use (e.g., `h1 { color: green; }`).</p>
+        </div>
+        <div class="explanation-item">
+            <h5>3. JavaScript (JS): The Action</h5>
+            <p>While not visible in this simple sample, JS handles **interactivity** and dynamic content, like animations, form validation, and data loading.</p>
+        </div>
+        <div class="explanation-item">
+            <h5>Try it out!</h5>
+            <p>Change the colors above, or type in the HTML editor, then watch the **Live Preview** update instantly to see the magic!</p>
+        </div>
+    </div>
+    
+    <div class="live-preview-panel">
+        <h3>Live Preview</h3>
+        <iframe id="preview-iframe" title="Live Code Preview"></iframe>
+    </div>
+</div>
+
 
                 <div class="editor-panel">
                     <h3>HTML <small>Structure</small></h3>
@@ -257,6 +291,9 @@
                     <a href="https://x.com/@Imptechacademyhttps://x.com/@Imptechacademy" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/company/imptechacademy" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://x.com/@Imptechacademy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://youtube.com/@imptechacademy?si=F0GeWkg954oltORa" aria-label="YouTube Channel" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
                 </div>
             </div>
         </div>
