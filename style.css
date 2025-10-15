@@ -2088,3 +2088,127 @@ body.no-scroll {
     /* Existing styles remain */
     margin-bottom: 25px; /* Increase this value slightly */
 }
+
+
+/* --- Partnership Page Styling --- */
+.partnership-intro, .partnership-needs, .future-vision-section, .partnership-cta {
+    padding: 60px 0;
+}
+
+.partnership-intro {
+    background-color: var(--light-bg-color);
+}
+
+.partnership-intro .lead-text, .partnership-cta .impact-statement {
+    font-size: 1.25rem;
+    max-width: 850px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Needs Grid Layout (Immediate Needs) */
+.needs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.need-item {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--accent-color); /* Highlight with accent color */
+}
+
+.need-item i {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.need-item h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.need-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Costing Section */
+.costing {
+    font-weight: 700;
+    color: #d9534f; /* Use a distinct color (like red) for financial figures */
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+    font-size: 1rem;
+}
+
+/* Future Vision Layout */
+.future-vision-section {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+.future-vision-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.future-vision-section p {
+    color: #ddd;
+}
+
+.future-needs-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.future-item {
+    flex: 0 1 450px; /* Max width for two items */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.future-item h4 {
+    color: var(--white-color);
+    margin-bottom: 10px;
+}
+
+.future-item i {
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Final CTA Section */
+.partnership-cta {
+    text-align: center;
+}
+
+.partnership-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
