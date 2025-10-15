@@ -1526,17 +1526,6 @@ p {
     margin-bottom: 20px; /* Adds a bit of space below the text */
 }
 
-/* Video Section (Original, if not already there) */
-.video-section {
-    padding: 60px 0;
-    text-align: center;
-    background-color: var(--light-bg-color);
-}
-
-.video-section h2 {
-    color: var(--primary-color);
-    margin-bottom: 40px;
-}
 
 /* New CSS for Android Phone Frame */
 .phone-frame-wrapper {
@@ -1783,6 +1772,18 @@ body.no-scroll {
 
 .cta-button.video-cta:hover {
     background-color: #CC0000; /* Darker red on hover */
+}
+
+/* Video Section (Original, if not already there) */
+.video-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--light-bg-color);
+}
+
+.video-section h2 {
+    color: var(--white-color);
+    margin-bottom: 40px;
 }
 
 /* --- Fix: Remove Blue Line on Nav Link Hover --- */
