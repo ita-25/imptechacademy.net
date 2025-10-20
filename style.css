@@ -2231,7 +2231,7 @@ body.no-scroll {
 
 /* Style the text part of the logo */
 .logo-name {
-    color: var(--primary-color); /* Use your primary dark color */
+    color: var(-white-color); /* Use your primary dark color */
     font-size: 1.4rem; /* Adjust font size to match your design */
     font-weight: 700; /* Make the name bold for impact */
     line-height: 1; /* Ensures vertical alignment is clean */
