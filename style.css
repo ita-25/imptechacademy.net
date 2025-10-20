@@ -2212,3 +2212,35 @@ body.no-scroll {
     display: inline-block;
     margin-top: 20px;
 }
+
+/* --- New Text + Icon Logo Styling --- */
+
+/* Style the overall container link */
+.logo-text-link {
+    display: flex; /* Aligns the icon and text horizontally */
+    align-items: center; /* Vertically centers the icon and text */
+    text-decoration: none;
+}
+
+/* Style the logo image (the icon) */
+.logo-icon {
+    height: 30px; /* Adjust height to fit your navigation bar */
+    width: auto;
+    margin-right: 8px; /* Adds space between the icon and the text */
+}
+
+/* Style the text part of the logo */
+.logo-name {
+    color: var(--primary-color); /* Use your primary dark color */
+    font-size: 1.4rem; /* Adjust font size to match your design */
+    font-weight: 700; /* Make the name bold for impact */
+    line-height: 1; /* Ensures vertical alignment is clean */
+    white-space: nowrap; /* Prevents the name from breaking onto two lines */
+}
+
+/* Optional: Adjust font size on small screens if the name is too long */
+@media (max-width: 480px) {
+    .logo-name {
+        font-size: 1.2rem;
+    }
+}
