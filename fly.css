@@ -1,0 +1,82 @@
+/* -------------------- Pop-up Flyer Styling -------------------- */
+
+/* The main container (initially hidden) */
+.flyer-popup {
+    display: none; /* Hide by default, JavaScript will show it */
+    position: fixed; /* Stays in place when scrolling */
+    z-index: 1000; /* Ensures it is on top of everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+}
+
+/* Content box style (centers the flyer) */
+.flyer-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Top margin + horizontally center */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Default width */
+    max-width: 500px; /* Maximum size for desktop */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the close button (top right) */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -10px; /* Adjust position slightly */
+    margin-right: -5px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Styling for the flyer image */
+.flyer-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Container to center the button */
+.flyer-button-container {
+    text-align: center;
+}
+
+/* Styling for the Learn More button */
+.learn-more-btn {
+    display: inline-block;
+    background-color: var(--primary-color, #007bff); /* Use your primary brand color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .flyer-content {
+        margin: 15% auto;
+        padding: 15px;
+    }
+}
