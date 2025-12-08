@@ -2244,3 +2244,146 @@ body.no-scroll {
         font-size: 1.2rem;
     }
 }
+
+
+
+
+/* -------------------- Footer Base Styles -------------------- */
+.main-footer {
+    background-color: var(--dark-color, #1a1a1a); /* Use your dark brand color */
+    color: var(--light-text-color, #f4f4f4); /* Light text for contrast */
+    padding: 60px 0 0; /* Padding top, footer-bottom handles padding bottom */
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-footer h4 {
+    color: var(--accent-color, #28a745); /* Use your accent or primary color for headers */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.main-footer p, .main-footer a {
+    color: var(--footer-link-color, #bbb);
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.main-footer a:hover {
+    color: var(--accent-color, #28a745);
+}
+
+/* -------------------- Grid Layout (Desktop) -------------------- */
+.footer-content-grid {
+    display: grid;
+    /* Defines 4 columns: 2 for brand/links, 1 for contact, 1 for social */
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    gap: 30px;
+    padding-bottom: 40px; /* Space above copyright bar */
+}
+
+/* Logo and Brand Section */
+.footer-logo {
+    max-width: 150px; /* Adjust size */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Quick Links Styling */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+/* Contact Info Styling */
+.footer-contact a {
+    display: flex; /* Aligns icon and text */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    min-width: 18px; /* Ensures icons align vertically */
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: var(--light-text-color, #f4f4f4);
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color, #28a745);
+}
+
+/* -------------------- Footer Bottom (Copyright Bar) -------------------- */
+.footer-bottom {
+    background-color: var(--footer-bottom-color, #111); /* Slightly darker bar */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin: 0;
+}
+
+
+/* -------------------- Mobile Responsiveness (Screen < 768px) -------------------- */
+@media (max-width: 768px) {
+    
+    .footer-content-grid {
+        /* Stack all columns vertically */
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+
+    /* Center all content within each column */
+    .footer-brand, .footer-links, .footer-contact, .footer-social {
+        margin-bottom: 30px;
+    }
+
+    .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center Quick Links list items */
+    .footer-links ul {
+        display: inline-block; /* Allows list to be centered */
+        text-align: left; /* Keeps text left-aligned within the centered container */
+    }
+
+    /* Center Contact Info elements */
+    .footer-contact p, .footer-contact a {
+        justify-content: center; /* Centers items if using flex on parent */
+        display: block; /* Ensures they stack */
+    }
+    
+    .footer-contact a {
+        /* To center phone/email links on mobile */
+        display: inline-flex;
+    }
+    
+    /* Center Social Icons */
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
