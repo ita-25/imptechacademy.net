@@ -2250,12 +2250,13 @@ body.no-scroll {
 
 /* Define key colors based on your brand aesthetic */
 :root {
-    /* If these aren't defined elsewhere, define them here: */
-    --tech-blue-dark: #0047A3; /* Deep Blue for Background */
-    --accent-color: #28a745; /* Your existing Green/Blue Accent */
-    --white-color: #ffffff;
-    --light-text-color: #f4f4f4;
+       --primary-color: #011C40; /* Dark, rich blue from flyer background */
+    --accent-color: #26A5FF; /* Vibrant, electric blue */
+    --light-accent-color: #4FB0FF; /* Lighter shade of accent for hover effects */
+    --white-color: #FFFFFF;
+    --text-color: #E6F2FF; /* Light blue for secondary text on dark background */
 }
+
 
 /* -------------------- Footer Base Styles -------------------- */
 .main-footer {
