@@ -2248,93 +2248,85 @@ body.no-scroll {
 
 
 
+/* Define key colors based on your brand aesthetic */
+:root {
+    /* If these aren't defined elsewhere, define them here: */
+    --tech-blue-dark: #0047A3; /* Deep Blue for Background */
+    --accent-color: #28a745; /* Your existing Green/Blue Accent */
+    --white-color: #ffffff;
+    --light-text-color: #f4f4f4;
+}
+
 /* -------------------- Footer Base Styles -------------------- */
 .main-footer {
-    background-color: var(--dark-color, #1a1a1a); /* Use your dark brand color */
-    color: var(--light-text-color, #f4f4f4); /* Light text for contrast */
-    padding: 60px 0 0; /* Padding top, footer-bottom handles padding bottom */
+    /* 1. Divider Implementation */
+    border-top: 8px solid var(--accent-color); /* Thick accent color divider */
+    
+    /* 2. Blue Aesthetic Background */
+    background-color: var(--tech-blue-dark); 
+    color: var(--light-text-color); 
+    padding: 60px 0 0;
     font-family: 'Roboto', sans-serif;
 }
 
+/* Header Styling (Thick White) */
 .main-footer h4 {
-    color: var(--accent-color, #28a745); /* Use your accent or primary color for headers */
-    font-size: 1.2rem;
+    color: var(--white-color); /* White Header */
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 800; /* Thick White */
 }
 
+/* Text and Links Styling (White/Light) */
 .main-footer p, .main-footer a {
-    color: var(--footer-link-color, #bbb);
+    color: var(--light-text-color);
     text-decoration: none;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
 .main-footer a:hover {
-    color: var(--accent-color, #28a745);
+    color: var(--accent-color); /* Hover remains your signature accent color */
 }
 
-/* -------------------- Grid Layout (Desktop) -------------------- */
-.footer-content-grid {
-    display: grid;
-    /* Defines 4 columns: 2 for brand/links, 1 for contact, 1 for social */
-    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
-    gap: 30px;
-    padding-bottom: 40px; /* Space above copyright bar */
-}
-
-/* Logo and Brand Section */
+/* Logo Image Styling */
 .footer-logo {
-    max-width: 150px; /* Adjust size */
+    /* Assuming your logo.png is white or transparent, otherwise use CSS filter */
+    max-width: 150px; 
     height: auto;
     margin-bottom: 15px;
 }
 
-/* Quick Links Styling */
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 8px;
-}
-
-/* Contact Info Styling */
-.footer-contact a {
-    display: flex; /* Aligns icon and text */
-    align-items: center;
-    margin-bottom: 10px;
-}
-
+/* Contact Info Icon Colors (Inherited from the light text color) */
 .footer-contact i {
     margin-right: 10px;
-    min-width: 18px; /* Ensures icons align vertically */
+    min-width: 18px;
+    color: var(--white-color); /* Ensure icons are white */
 }
 
-/* Social Icons Styling */
+/* Social Icons Styling (White) */
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 18px; /* Slightly wider gap */
     margin-top: 10px;
 }
 
 .social-icons a {
-    color: var(--light-text-color, #f4f4f4);
-    font-size: 1.3rem;
+    color: var(--white-color); /* White Fav Icons */
+    font-size: 1.6rem; /* Slightly larger icons for presence */
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: var(--accent-color, #28a745);
+    color: var(--accent-color); /* Hover remains your signature accent color */
 }
 
 /* -------------------- Footer Bottom (Copyright Bar) -------------------- */
 .footer-bottom {
-    background-color: var(--footer-bottom-color, #111); /* Slightly darker bar */
+    background-color: #003882; /* Slightly darker shade of blue for the bar */
     padding: 20px 0;
     text-align: center;
-    border-top: 1px solid #333;
+    border-top: 1px solid #0050B8; /* Light divider line */
 }
 
 .footer-bottom p {
@@ -2342,6 +2334,8 @@ body.no-scroll {
     color: #ccc;
     margin: 0;
 }
+
+/* No change needed for the media query structure; it remains perfect for responsiveness. */
 
 
 /* -------------------- Mobile Responsiveness (Screen < 768px) -------------------- */
