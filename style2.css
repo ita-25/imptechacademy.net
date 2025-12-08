@@ -1651,6 +1651,7 @@ body.no-scroll {
 
 /* -------------------- Footer Base Styles -------------------- */
 .main-footer {
+    border-top: 8px solid var(--accent-color); /* Thick accent color divider */
     background-color: var(--dark-color, #1a1a1a); /* Use your dark brand color */
     color: var(--light-text-color, #f4f4f4); /* Light text for contrast */
     padding: 60px 0 0; /* Padding top, footer-bottom handles padding bottom */
