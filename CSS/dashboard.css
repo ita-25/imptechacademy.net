@@ -25,8 +25,9 @@
 .sidebar-header {
     padding: 24px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-decoration: none;
 }
+
+
 
 .sidebar-logo {
     display: flex;
@@ -43,6 +44,10 @@
     font-size: 24px;
 }
 
+.sidebar-logo a {
+  text-decoration: none;
+}
+   
 .sidebar-logo span {
     color: #4361ee;
 }
