@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supabase Auth Test</title>
+</head>
+<body>
+    <h2>Supabase Connection Test</h2>
+    <button onclick="testConnection()">Test Connection</button>
+    <button onclick="testEmailLogin()">Test Email Login</button>
+    <button onclick="testGoogleLogin()">Test Google Login</button>
+    <div id="result"></div>
+    
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+        const supabase = window.supabase.createClient(
+            'https://dvptsrzfbmrbexcwhkqe.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR2cHRzcnpmYm1yYmV4Y3doa3FlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxOTg0NTUsImV4cCI6MjA4Mzc3NDQ1NX0.vsimT5xjZ9i_hgqExebBUaHUbGCC9zstak__tly4u4Y'
+        );
+        
+        async function testConnection() {
+            const { data, error } = await supabase.auth.getSession();
+            document.getElementById('result').innerHTML = 
+                error ? `Error: ${error.message}` : `Connected: ${data.session ? 'Logged in' : 'Not logged in'}`;
+        }
+        
+        async function testEmailLogin() {
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: 'test@imptechacademy.com',
+                password: 'TestPassword123'
+            });
+            document.getElementById('result').innerHTML = 
+                error ? `Login error: ${error.message}` : `Login success: ${data.user.email}`;
+        }
+        
+        async function testGoogleLogin() {
+            const { data, error } = await supabase.auth.signInWithOAuth({
+                provider: 'google',
+                options: { redirectTo: window.location.origin }
+            });
+            document.getElementById('result').innerHTML = 
+                error ? `Google error: ${error.message}` : 'Google login initiated';
+        }
+    </script>
+</body>
+</html>
