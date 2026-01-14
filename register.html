@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Impact Tech Academy</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/register.css">
+    </head>
+<body>
+    <div class="register-container">
+        <!-- Left Side: Registration Form -->
+        <div class="register-left">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Impact<span>Tech</span>Academy
+            </div>
+            
+            <h1>Join Our Academy</h1>
+            <p class="subtitle">Start your tech journey today. No prior experience required.</p>
+            
+            <!-- Progress Steps (Optional) -->
+            <div class="progress-steps">
+                <div class="step active">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+            </div>
+            
+            <!-- Alert Messages -->
+            <div id="alert" class="alert"></div>
+            
+            <!-- Social Login Buttons -->
+            <div class="social-logins">
+                <button id="googleRegister" class="btn btn-google">
+                    <i class="fab fa-google"></i>
+                    Sign up with Google
+                </button>
+                
+                <button id="githubRegister" class="btn btn-github">
+                    <i class="fab fa-github"></i>
+                    Sign up with GitHub
+                </button>
+            </div>
+            
+            <div class="divider">
+                <span>Or sign up with email</span>
+            </div>
+            
+            <!-- Email Registration Form -->
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="student@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" placeholder="+234 800 000 0000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" placeholder="Create a strong password" required>
+                    <div class="password-strength">
+                        <div class="strength-bar" id="strengthBar"></div>
+                    </div>
+                    <div class="password-hint">Use at least 8 characters with uppercase, lowercase, and numbers</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    <div class="password-hint" id="passwordMatch"></div>
+                </div>
+                
+                <div class="terms-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">
+                        I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>. 
+                        I understand that I'll receive course updates and educational content.
+                    </label>
+                </div>
+                
+                <div class="terms-group">
+                    <input type="checkbox" id="newsletter" checked>
+                    <label for="newsletter">
+                        Send me tech tips, course updates, and special offers via email.
+                    </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-register">
+                    <i class="fas fa-user-plus"></i>
+                    Create Account
+                </button>
+            </form>
+            
+            <div class="login-footer">
+                <p>Already have an account? <a href="login.html">Sign in here</a></p>
+            </div>
+        </div>
+        
+        <!-- Right Side: Promotional Content -->
+        <div class="register-right">
+            <div class="right-content">
+                <h2>Why Join Impact Tech Academy?</h2>
+                <p>Become part of Nigeria's fastest-growing tech community. From complete beginners to career changers, we help everyone succeed in tech.</p>
+                
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> <strong>Phone-First Learning:</strong> Start coding with just your smartphone</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Project-Based Curriculum:</strong> Build real projects for your portfolio</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>AI-Powered Tools:</strong> Learn with cutting-edge AI assistants</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Expert Mentorship:</strong> Get guidance from industry professionals</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Career Support:</strong> Job placement assistance and interview prep</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Flexible Payment:</strong> Affordable plans with installment options</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Community Access:</strong> Join our active student community</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Certification:</strong> Get recognized certificates upon completion</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Supabase JS Library -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    
+    <script src="js/register.js"></script>
+    </body>
+    </html>
+    
