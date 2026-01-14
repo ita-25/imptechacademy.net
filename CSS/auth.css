@@ -1,0 +1,45 @@
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.alert-error {
+    background: #fee;
+    color: #c33;
+    border: 1px solid #fcc;
+}
+
+.alert-success {
+    background: #efe;
+    color: #383;
+    border: 1px solid #cfc;
+}
+
+/* Password strength bar */
+.password-strength {
+    margin-top: 5px;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.strength-bar.weak { width: 25%; background: #ef476f; }
+.strength-bar.fair { width: 50%; background: #ffd166; }
+.strength-bar.good { width: 75%; background: #06d6a0; }
+.strength-bar.strong { width: 100%; background: #118ab2; }
+
+.password-hint {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 5px;
+}
