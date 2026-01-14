@@ -43,13 +43,19 @@
     color: #4361ee;
     font-size: 24px;
 }
-
-.sidebar-logo a {
-  text-decoration: none;
-}
    
 .sidebar-logo span {
     color: #4361ee;
+}
+
+.sidebar-logo-link {
+    text-decoration: none;
+    color: inherit; /* Keeps original text color */
+    display: inline-block; /* or block, depending on layout */
+}
+
+.sidebar-logo-link:hover {
+    opacity: 0.8; /* Visual feedback on hover */
 }
 
 /* User Profile in Sidebar */
