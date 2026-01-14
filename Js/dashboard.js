@@ -1,4 +1,4 @@
-// js/dashboard.js
+// Js/dashboard.js
 // Dashboard functionality
 
 // Dashboard state
