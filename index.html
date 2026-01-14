@@ -1,4 +1,11 @@
-<meta name="description" content="Impact Tech Academy: Mobile-first web development training. Learn HTML, CSS, JavaScript, and get job-ready tech skills using only your smartphone.">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Tech Academy </title>
+
+    <meta name="description" content="Impact Tech Academy: Mobile-first web development training. Learn HTML, CSS, JavaScript, and get job-ready tech skills using only your smartphone.">
 <meta name="keywords" content="mobile coding, web development, Nigeria, tech skills, HTML, CSS, JavaScript, coding on phone, Impact Tech Academy">
 <meta name="author" content="Paul Ejime Mormah">
 
@@ -11,4 +18,560 @@
 <meta property="og:image" content="https://imptechacademy.vercel.app/logo.png">
 
 <link rel="preconnect"google-site-verification: google34296bd155642e0a.html">
+  
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/homepage.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Impact Tech Academy",
+  "url": "https://imptechacademy.vercel.app/",
+  "logo": "https://imptechacademy.vercel.app/img/logo-icon.png",
+  "sameAs": [
+    "https://www.facebook.com/share/1BvfP1JTjo/",
+    "https://x.com/@Imptechacademy",
+    "https://www.linkedin.com/company/imptechacademy",
+    "https://www.instagram.com/impacttech_academy",
+    "https://youtube.com/@imptechacademy"
+  ]
+}
+</script>
+  
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Impact<span>Tech</span></span>
+            </div>
+            <div class="loading-spinner"></div>
+            <p>Loading your tech future...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Impact<span>Tech</span>Academy
+            </a>
+            
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#about">About</a>
+                <a href="#impact">Impact</a>
+                <a href="#contact">Contact</a>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-video">
+            <!-- Fallback image if video doesn't load -->
+            <div class="video-fallback"></div>
+            <video autoplay muted loop playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-typing-on-computer-keyboard-34511-large.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h6 class="hero-subtitle">Democratizing Tech Education in Africa</h6>
+                    <h1 class="hero-title">
+                        <span class="title-line">Build Your Future</span>
+                        <span class="title-line highlight">With <span class="typing-text" id="typingText"></span></span>
+                    </h1>
+                    <p class="hero-description">
+                        Impact Tech Academy is bridging the digital divide by making quality tech education accessible to everyone. 
+                        Start your journey with just your phone or laptop.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary btn-large">
+                            <i class="fas fa-play-circle"></i>
+                            Start Learning Free
+                        </a>
+                        <a href="#about" class="btn btn-outline btn-large">
+                            <i class="fas fa-video"></i>
+                            Watch Demo
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>1,200+</h3>
+                            <p>Students Trained</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24</h3>
+                            <p>Courses Available</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                        <div class="stat">
+                            <h3>₦10K</h3>
+                            <p>Starting Price</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <a href="#courses">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <p class="partners-title">Trusted by students from leading institutions</p>
+            <div class="partners-grid">
+                <div class="partner">
+                    <i class="fas fa-university"></i>
+                    <span>University of Lagos</span>
+                </div>
+                <div class="partner">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>NOUN Students</span>
+                </div>
+                <div class="partner">
+                    <i class="fas fa-building"></i>
+                    <span>Corporate Trainees</span>
+                </div>
+                <div class="partner">
+                    <i class="fas fa-globe-africa"></i>
+                    <span>African Diaspora</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h6 class="section-subtitle">Why Choose Impact Tech</h6>
+                <h2 class="section-title">Learn Differently, Succeed Faster</h2>
+                <p class="section-description">
+                    Our innovative approach combines traditional learning with cutting-edge technology 
+                    to deliver results that transform careers.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Phone-First Learning</h3>
+                    <p>Start coding immediately with just your smartphone. No expensive laptop required to begin your tech journey.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Education</h3>
+                    <p>Learn with AI assistants that provide personalized guidance, code reviews, and instant feedback.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Project-Based Curriculum</h3>
+                    <p>Build real projects from day one. Graduate with a portfolio that impresses employers.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Join our active community of learners, mentors, and industry professionals for networking and support.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h6 class="section-subtitle">Our Programs</h6>
+                <h2 class="section-title">Transformative Tech Courses</h2>
+                <p class="section-description">
+                    From complete beginners to career changers, we have the perfect course for your goals.
+                </p>
+            </div>
+            
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Courses will be loaded dynamically from database -->
+                <div class="course-card loading">
+                    <div class="course-image"></div>
+                    <div class="course-content">
+                        <div class="course-category"></div>
+                        <h3 class="course-title"></h3>
+                        <p class="course-description"></p>
+                        <div class="course-meta">
+                            <span class="duration"></span>
+                            <span class="level"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="course.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-book-open"></i>
+                    View All Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Story -->
+    <section class="founder" id="about">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-image">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1544717305-99670f9c28f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paul Ejime Mormah - Founder">
+                        <div class="founder-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Founder & Lead Instructor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="founder-content">
+                    <h6 class="section-subtitle">Meet Our Founder</h6>
+                    <h2 class="section-title">Paul Ejime Mormah</h2>
+                    <p class="founder-bio">
+                        As a final-year Information Technology student at the National Open University of Nigeria, 
+                        I understand the challenges of accessing quality tech education. My journey from web development 
+                        to cybersecurity and cloud computing inspired me to create Impact Tech Academy.
+                    </p>
+                    
+                    <div class="founder-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"I believe that tech is for everyone. Our mission is to break down barriers and make 
+                        world-class tech education accessible across Africa, starting with Nigeria."</p>
+                    </div>
+                    
+                    <div class="founder-skills">
+                        <div class="skill">
+                            <i class="fab fa-html5"></i>
+                            <span>Web Development</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersecurity</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Computing</span>
+                        </div>
+                        <div class="skill">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>IT Education</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-handshake"></i>
+                        Partner With Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="section-header">
+                <h6 class="section-subtitle">Our Impact</h6>
+                <h2 class="section-title">Transforming Lives Through Tech</h2>
+            </div>
+            
+            <div class="impact-stats">
+                <div class="impact-stat">
+                    <div class="stat-number" data-count="85">0</div>
+                    <div class="stat-label">Career Changes</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-number" data-count="1200">0</div>
+                    <div class="stat-label">Students Trained</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-number" data-count="40">0</div>
+                    <div class="stat-label">Job Placements</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Partner Schools</div>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The phone-first approach changed everything for me. As a student without a laptop, 
+                        I was able to start my web development journey and land my first freelance job!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Student">
+                        <div>
+                            <h4>Aisha Mohammed</h4>
+                            <p>Web Development Student</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The AI-powered learning tools helped me understand complex concepts faster. 
+                        I went from zero coding experience to building full-stack applications in 6 months."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Student">
+                        <div>
+                            <h4>Chinedu Okoro</h4>
+                            <p>Full-Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Future?</h2>
+                <p>Join thousands of students who have started their tech journey with Impact Tech Academy. 
+                No prior experience required. Start with just your phone.</p>
+                
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-user-plus"></i>
+                        Start Free Trial
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-large">
+                        <i class="fas fa-calendar"></i>
+                        Book Consultation
+                    </a>
+                </div>
+                
+                <div class="cta-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>7-Day Free Trial</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Flexible Payment Plans</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Money-Back Guarantee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Have questions? Our team is here to help you start your tech journey.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>imptechacademy@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+2349071849794</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>Lagos, Nigeria<br>Coming soon to Abuja & Port Harcourt</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://x.com/@Imptechacademy" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/imptechacademy" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1BvfP1JTjo" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/impacttech_academy" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@imptechacademy" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Interested In</option>
+                                <option value="web-dev">Web Development</option>
+                                <option value="cyber">Cybersecurity</option>
+                                <option value="cloud">Cloud Computing</option>
+                                <option value="ai">AI & ML</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        Impact<span>Tech</span>Academy
+                    </div>
+                    <p class="footer-description">
+                        Democratizing tech education in Africa through innovative, 
+                        accessible, and practical learning solutions.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="course.html">Courses</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">AI & Machine Learning</a></li>
+                        <li><a href="#">Project Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Student Agreement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new courses and tech tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Impact Tech Academy. All rights reserved. | Founded by Paul Ejime Mormah</p>
+                <p>Bridging the digital divide across Africa</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="Js/supabase-config.js"></script>
+    <script src="Js/homepage.js"></script>
+</body>
+</html>
 
