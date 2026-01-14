@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Impact Tech Academy</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/auth.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    Impact<span>Tech</span>
+                </div>
+            </div>
+            
+            <!-- User Profile in Sidebar -->
+            <div class="user-profile-sidebar" id="userProfileSidebar">
+                <div class="user-avatar" id="userAvatar">
+                    <!-- Initials will be added by JavaScript -->
+                </div>
+                <div class="user-info">
+                    <h4 id="userFullName">Loading...</h4>
+                    <p id="userRole">Student</p>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-page="courses">
+                    <i class="fas fa-book-open"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="#" class="nav-item" data-page="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="#" class="nav-item" data-page="certificates">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certificates</span>
+                </a>
+                <a href="#" class="nav-item" data-page="resources">
+                    <i class="fas fa-folder"></i>
+                    <span>Resources</span>
+                </a>
+                <a href="#" class="nav-item" data-page="profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="nav-item" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-spacer" style="margin-top: 20px;"></div>
+                <a href="#" class="nav-item" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation Bar -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="page-title">
+                        <h1 id="pageTitle">Dashboard</h1>
+                    </div>
+                </div>
+                
+                <div class="topbar-right">
+                    <button class="notification-btn" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge" id="notificationBadge">3</span>
+                    </button>
+                    
+                    <div class="user-menu" id="userMenu">
+                        <div class="user-menu-avatar" id="userMenuAvatar">
+                            <!-- Initials will be added by JavaScript -->
+                        </div>
+                        <span class="user-menu-name" id="userMenuName">Loading...</span>
+                        <i class="fas fa-chevron-down"></i>
+                        
+                        <!-- Dropdown Menu -->
+                        <div class="user-menu-dropdown" id="userMenuDropdown">
+                            <a href="#" class="dropdown-item" data-page="profile">
+                                <i class="fas fa-user"></i>
+                                <span>My Profile</span>
+                            </a>
+                            <a href="#" class="dropdown-item" data-page="settings">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" id="dropdownLogout">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dashboard Content -->
+            <div class="dashboard-content" id="dashboardContent">
+                <!-- Welcome Banner -->
+                <div class="welcome-banner">
+                    <h2>Welcome back, <span id="welcomeName">Student</span>! 👋</h2>
+                    <p>Continue your tech journey. You're making great progress!</p>
+                </div>
+                
+                <!-- Stats Overview -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon courses">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <h3 id="coursesCount">0</h3>
+                        <p>Enrolled Courses</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon progress">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <h3 id="avgProgress">0%</h3>
+                        <p>Average Progress</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon hours">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <h3 id="learningHours">0</h3>
+                        <p>Learning Hours</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-card-icon certificates">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <h3 id="certificatesCount">0</h3>
+                        <p>Certificates</p>
+                    </div>
+                </div>
+                
+                <!-- Two Column Layout -->
+                <div class="two-column-layout">
+                    <!-- Left Column -->
+                    <div class="left-column">
+                        <!-- My Courses -->
+                        <div class="progress-section">
+                            <div class="section-header">
+                                <h2>My Courses</h2>
+                                <a href="#" data-page="courses">View All</a>
+                            </div>
+                            <div class="courses-grid" id="coursesGrid">
+                                <!-- Courses will be loaded by JavaScript -->
+                                <div class="skeleton-course">
+                                    <div class="skeleton skeleton-text" style="height: 200px; border-radius: 12px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Overview -->
+                        <div class="progress-section">
+                            <div class="section-header">
+                                <h2>Course Progress</h2>
+                                <a href="#" data-page="progress">Details</a>
+                            </div>
+                            <div id="progressList">
+                                <!-- Progress bars will be loaded by JavaScript -->
+                                <div class="skeleton-progress">
+                                    <div class="skeleton skeleton-text" style="height: 20px; margin-bottom: 10px;"></div>
+                                    <div class="skeleton skeleton-text" style="height: 8px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div class="right-column">
+                        <!-- Quick Actions -->
+                        <div class="quick-actions">
+                            <h2 style="margin-top: 0; margin-bottom: 20px;">Quick Actions</h2>
+                            <div class="action-buttons">
+                                <a href="#" class="action-btn" data-page="courses">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Enroll in New Course</span>
+                                </a>
+                                <a href="#" class="action-btn" data-page="resources">
+                                    <i class="fas fa-download"></i>
+                                    <span>Download Resources</span>
+                                </a>
+                                <a href="#" class="action-btn" data-page="certificates">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>View Certificates</span>
+                                </a>
+                                <a href="#" class="action-btn" data-page="profile">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Update Profile</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Activity -->
+                        <div class="activity-list" style="margin-top: 30px;">
+                            <div class="section-header">
+                                <h2>Recent Activity</h2>
+                                <a href="#" data-page="activity">See All</a>
+                            </div>
+                            <div id="activityList">
+                                <!-- Activities will be loaded by JavaScript -->
+                                <div class="skeleton-activity">
+                                    <div class="skeleton skeleton-text" style="height: 60px; margin-bottom: 10px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Upcoming Deadlines -->
+                        <div class="deadline-list" style="margin-top: 30px;">
+                            <div class="section-header">
+                                <h2>Upcoming Deadlines</h2>
+                                <a href="#" data-page="deadlines">View All</a>
+                            </div>
+                            <div id="deadlineList">
+                                <!-- Deadlines will be loaded by JavaScript -->
+                                <div class="skeleton-deadline">
+                                    <div class="skeleton skeleton-text" style="height: 60px; margin-bottom: 10px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Footer -->
+                <div class="dashboard-footer">
+                    <p>Need help? Visit our <a href="#">Help Center</a> or contact <a href="#">support@imptechacademy.com</a></p>
+                    <p>&copy; 2024 Impact Tech Academy. All rights reserved.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    
+    <!-- Our JavaScript Files -->
+    <script src="Js/supabase-config.js"></script>
+    <script src="Js/auth.js"></script>
+    <script src="Js/dashboard.js"></script>
+</body>
+</html>
